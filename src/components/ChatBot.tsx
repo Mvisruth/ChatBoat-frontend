@@ -31,7 +31,6 @@ function ChatBot() {
 
     setMessages((prev) => [...prev, { role: "bot", text: data.reply }]);
   };
-
   return (
     <div className="w-full h-screen bg-gray-50 flex flex-col">
       {/* Top Header */}
@@ -51,7 +50,7 @@ function ChatBot() {
                 Welcome to ChatBoat 👋
               </h2>
               <p className="text-sm mt-2">
-                Ask anything and get instant replies.
+                Ask anything and get instant replies..
               </p>
             </div>
           )}
