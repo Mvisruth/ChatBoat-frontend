@@ -27,10 +27,7 @@ function ChatBot() {
     setMessages((prev) => [...prev, { role: "user", text: userText }]);
     reset();
 
-const { data } = await axios.post(
-  `${import.meta.env.VITE_API_URL}/api/chat`,
-  { prompt: userText }
-);
+    const { data } = await axios.post("https://chatboat-backend-gsnd.onrender.com/api/chat", { prompt: userText });
 
     setMessages((prev) => [...prev, { role: "bot", text: data.reply }]);
   };
